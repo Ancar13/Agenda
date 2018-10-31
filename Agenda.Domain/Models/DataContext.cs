@@ -11,5 +11,7 @@ namespace Agenda.Domain.Models
 
 
         }
+
+        public System.Data.Entity.DbSet<Agenda.Common.Models.Eventos> Eventos { get; set; }
     }
 }
