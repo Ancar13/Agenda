@@ -8,7 +8,6 @@
             BindingContext="{Binding Events}">
             <ListView
                 ItemsSource="{Binding Events}">
-                
             </ListView>
         </StackLayout>
     </ContentPage.Content>

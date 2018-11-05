@@ -17,5 +17,10 @@ namespace Agenda.Common.Models
         public string textColor { get; set; }
         public DateTime start { get; set; }
         public DateTime end { get; set; }
+
+        public override string ToString()
+        {
+            return this.descripcion;
+        }
     }
 }
