@@ -1,7 +1,6 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using Agenda.Views;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Agenda
 {
@@ -11,7 +10,7 @@ namespace Agenda
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new EventsPage();
         }
 
         protected override void OnStart()

@@ -40,10 +40,10 @@ namespace Agenda.Services
                 return new Response()
                 {
                     IsSuccess = false,
-                    Message =  e.Message,
+                    Message = e.Message,
 
 
-                }
+                };
             }
 
         } 
