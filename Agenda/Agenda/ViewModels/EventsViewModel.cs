@@ -25,10 +25,10 @@ namespace Agenda.ViewModels
 
         private async void LoadEventos()
         {
-            var response = await this.apiService.GetList<Eventos>("localhost:53008", "/api", "/Eventos");
+            var response = await this.apiService.GetList<Eventos>("http://localhost:53008", "/api", "/Eventos");
             if (!response.IsSuccess)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", response.Message, "Accept");
+                await App.Current.MainPage.DisplayAlert("Error", response.Message, "Accept");
                 return;
             }
 

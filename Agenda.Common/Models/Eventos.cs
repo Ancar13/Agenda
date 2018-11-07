@@ -18,9 +18,9 @@ namespace Agenda.Common.Models
         public DateTime start { get; set; }
         public DateTime end { get; set; }
 
-        public override string ToString()
-        {
-            return this.descripcion;
-        }
+        //public override string ToString()
+        //{
+        //    return this.title;
+        //}
     }
 }

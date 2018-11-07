@@ -5,9 +5,9 @@
             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
         <StackLayout
-            BindingContext="{Binding Events}">
+            BindingContext="{Binding Eventos}">
             <ListView
-                ItemsSource="{Binding Events}">
+                ItemsSource="{Binding Eventos}">
             </ListView>
         </StackLayout>
     </ContentPage.Content>
