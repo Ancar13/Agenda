@@ -19,7 +19,7 @@ namespace Agenda.Services
                 var url = $"{prefix}{controller}";
                 var response = await client.GetAsync(url);
                 var answey = await response.Content.ReadAsStringAsync();
-                if (!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode) //HOLA CARACOLA
                 {
                     return new Response
                     {
