@@ -14,14 +14,19 @@ using Agenda.Domain.Models;
 
 namespace Agenda.API.Controllers
 {
+    [RoutePrefix("api/eventos")]
     public class EventosController : ApiController
     {
         private DataContext db = new DataContext();
 
         // GET: api/Eventos
-        public IQueryable<Eventos> GetEventos()
+        [Route("all")]
+        public IHttpActionResult GetEventos()
         {
-            return db.Eventos;
+            var eventos =  db.Eventos;
+            var result = eventos.Select(ev => ev.ToResponse()).ToList();
+
+            return Ok(result);
         }
 
         // GET: api/Eventos/5

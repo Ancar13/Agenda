@@ -25,7 +25,7 @@ namespace Agenda.ViewModels
 
         private async void LoadEventos()
         {
-            var response = await this.apiService.GetList<Eventos>("http://localhost:53008", "/api", "/Eventos");
+            var response = await this.apiService.GetList<Eventos>("http://10.100.0.102/agenda.api", "/api", "/Eventos");
             if (!response.IsSuccess)
             {
                 await App.Current.MainPage.DisplayAlert("Error", response.Message, "Accept");

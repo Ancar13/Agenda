@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Agenda.Common.Models
@@ -18,9 +19,25 @@ namespace Agenda.Common.Models
         public DateTime start { get; set; }
         public DateTime end { get; set; }
 
-        //public override string ToString()
-        //{
-        //    return this.title;
-        //}
+        public EventoResponse ToResponse()
+        {
+            return new EventoResponse()
+            {
+                Title = this.title
+            };
+        }
+
+
+        public override string ToString()
+        {
+            return this.title;
+        }
+    }
+
+
+    public class EventoResponse
+    {
+        [JsonProperty("title")]
+        public string Title { get; set; }
     }
 }
